@@ -13,13 +13,14 @@ if ($result = $mysqli->query("SELECT * FROM tbl_product ORDER BY id ")) {
     if ($result->num_rows > 0) {
         echo "<table border='1' cellpadding='10'>";
         echo "<tr><th>ID</th><th>Nume Produs</th><th>Cod
-Produs</th><th>Imagine</th><th>Descriere</th><th>Categorie</th><th></th><th></th></tr>";
+Produs</th><th>Imagine</th><th>Pret</th><th>Descriere</th><th>Categorie</th><th></th><th></th></tr>";
         while ($row = $result->fetch_object()) {
             echo "<tr>";
             echo "<td>" . $row->id . "</td>";
             echo "<td>" . $row->name . "</td>";
             echo "<td>" . $row->code . "</td>";
             echo "<td>" . $row->image . "</td>";
+            echo "<td>" . $row->price . "</td>";
             echo "<td>" . $row->descriere . "</td>";
             echo "<td>" . $row->categorie . "</td>";
             echo "<td><a href='Modificare.php?id=" . $row->id . "'>Modificare</a></td>";

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+<body>
+<div class="login">
+    <h1>Login</h1>
+    <form action="autentificare.php" method="post">
+        <label for="Username">
+            <i class="fas fa-user"></i>
+        </label>
+        <input type="text" name="Username" placeholder="Username"
+               id="Username" required>
+        <label for="Pass">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="password" name="Password"
+               placeholder="Password" id="Pass" required>
+        <input type="submit" value="Login">
+    </form>
+    <div><a href="registration.html">Nou utilizator</a></div>
+</div>
+</body>
+</html>

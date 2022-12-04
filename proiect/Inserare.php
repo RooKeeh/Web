@@ -5,11 +5,13 @@ if (isset($_POST['submit'])) {
     $Denumire = htmlentities($_POST['Denumire'], ENT_QUOTES);
     $Pret = htmlentities($_POST['Pret'], ENT_QUOTES);
     $id_categorie = htmlentities($_POST['id_categorie'], ENT_QUOTES);
-    if ($Denumire == '' || $Pret == '' || $id_categorie == '') {
+    $Imagine = htmlentities($_POST['Imagine'], ENT_QUOTES);
+    $Descriere = htmlentities($_POST['Descriere'], ENT_QUOTES);
+    if ($Denumire == '' || $Pret == '' || $id_categorie == '' || $Imagine == '' || $Descriere == '') {
         $error = 'ERROR: Campuri goale!';
     } else {
-        if ($stmt = $mysqli->prepare("INSERT into produse (Denumire, Pret, id_categorie) VALUES (?, ?, ?)")) {
-            $stmt->bind_param("sds", $Denumire, $Pret, $id_categorie);
+        if ($stmt = $mysqli->prepare("INSERT into produse (Denumire, Pret, id_categorie, Imagine, Descriere) VALUES (?, ?, ?, ?, ?)")) {
+            $stmt->bind_param("sdsss", $Denumire, $Pret, $id_categorie, $Imagine, $Descriere);
             $stmt->execute();
             $stmt->close();
         } else {
@@ -34,9 +36,11 @@ $mysqli->close();
         <strong>Denumire: </strong> <input type="text" name="Denumire" value=""/><br/>
         <strong>Pret: </strong> <input type="text" name="Pret" value=""/><br/>
         <strong>id_categorie: </strong> <input type="text" name="id_categorie" value=""/><br/>
+        <strong>Imagine: </strong> <input type="text" name="Imagine" value=""/><br/>
+        <strong>Descriere: </strong> <input type="text" name="Descriere" value=""/><br/>
         <br/>
         <input type="submit" name="submit" value="Submit"/>
-        <a href="Vizualizare.php">Inapoi</a>
+        <a href="Vizualizare_admin.php">Inapoi</a>
     </div>
 </form>
 </body>

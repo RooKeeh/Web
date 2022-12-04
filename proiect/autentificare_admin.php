@@ -25,7 +25,7 @@ if ($stmt = $con->prepare('SELECT id_admin, password_admin FROM utilizatori WHER
             $_SESSION['name'] = $_POST['username_admin'];
             $_SESSION['id'] = $id_admin;
             echo 'Bine ati venit' . $_SESSION['name'] . '!';
-            header('Location: Vizualizare.php');
+            header('Location: Vizualizare_admin.php');
         } else {
             echo 'Incorrect username sau password!';
         }

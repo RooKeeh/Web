@@ -25,7 +25,7 @@ if ($stmt = $con->prepare('SELECT ID, Pass FROM clienti WHERE Username = ?')) {
             $_SESSION['name'] = $_POST['Username'];
             $_SESSION['id'] = $ID;
             echo 'Bine ati venit' . $_SESSION['name'] . '!';
-            header('Location: Vizualizare.php');
+            header('Location: magazin_logout.php');
         } else {
             echo 'Incorrect username sau password!';
         }

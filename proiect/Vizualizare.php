@@ -19,8 +19,7 @@ if ($result = $mysqli->query("SELECT * FROM produse ORDER BY ID ")) {
             echo "<td>" . $row->Denumire . "</td>";
             echo "<td>" . $row->Pret . "</td>";
             echo "<td>" . $row->id_categorie . "</td>";
-            echo "<td><a href='Modificare.php?id=" . $row->ID . "'>Modificare</a></td>";
-            echo "<td><a href='Stergere.php?id=" . $row->ID . "'>Stergere</a></td>";
+            echo "<td><a href='Adauga.php?id=" . $row->ID . "'>Adauga in cos</a></td>";
             echo "</tr>";
         }
         echo "</table>";
@@ -32,7 +31,5 @@ if ($result = $mysqli->query("SELECT * FROM produse ORDER BY ID ")) {
 }
 $mysqli->close();
 ?>
-<a href="Inserare.php">Adaugarea unei noi inregistrari</a>
-<a href="logout.php">Logout</a>
 </body>
 </html>

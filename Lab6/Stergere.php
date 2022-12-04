@@ -12,5 +12,5 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     $mysqli->close();
     echo "<div>Inregistrarea a fost stearsa!!!!</div>";
 }
-echo "<p><a href=\"Vizualizare.php\">Index</a></p>";
+echo "<p><a href=\"Vizualizare_admin.php\">Index</a></p>";
 ?>

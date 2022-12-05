@@ -31,6 +31,7 @@ if (!empty($_POST['ID'])) {
             echo "Modificare inregistrare";
         } ?> </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1><?php if ($_GET['id'] != '') {

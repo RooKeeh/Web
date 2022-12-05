@@ -25,6 +25,7 @@ $mysqli->close();
 <html>
 <head><title><?php echo "Inserare inregistrare"; ?> </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1><?php echo "Inserare inregistrare"; ?></h1>

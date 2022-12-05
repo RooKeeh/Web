@@ -3,12 +3,12 @@ require_once "ShoppingCart.php";?>
 <HTML>
 <HEAD>
     <TITLE>Magazin</TITLE>
-    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link href="styles.css" type="text/css" rel="stylesheet" />
 </HEAD>
 <BODY>
-<div id="product-grid">
-    <a href="Index.html">Login</a>
-    <div class="txt-heading"><div class="txt-headinglabel">Products</div></div>
+<a href="Index.html" class="login-btn">Login</a>
+<div class="shop-name">Apple Store</div>
+<div class="product-grid">
     <?php
     $shoppingCart = new ShoppingCart();
     $query = "SELECT * FROM produse";

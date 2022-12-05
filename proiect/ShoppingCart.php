@@ -106,7 +106,7 @@ cos_id, cos.cantitate FROM produse, cos WHERE produse.ID = cos.ID_Produs AND cos
 
     function deleteCosItem($ID)
     {
-        $query = "DELETE FROM cos WHERE ID=?";
+        $query = "DELETE FROM cos WHERE ID_Produs=?";
 
         $params = array(
             array(

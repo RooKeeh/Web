@@ -3,6 +3,7 @@
 <head>
     <title>Vizualizare Inregistrari</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <h1>Inregistrarile din tabela produse</h1>
